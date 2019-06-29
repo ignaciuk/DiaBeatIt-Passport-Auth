@@ -27,6 +27,7 @@ require("./config/passport");
 
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://ignaciuk:qyKDcJmGnUz4NRJ@ds245387.mlab.com:45387/heroku_w86h6vgp");
+mongoose.set('useFindAndModify', false);
 
 // Start the API server
 app.listen(PORT, function() {
