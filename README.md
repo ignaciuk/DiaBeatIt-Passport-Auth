@@ -1,6 +1,6 @@
 # DiaBeatIt
 
-[Click here to view deployed app](https://dia-beat-it.herokuapp.com/)
+[Click here to view deployed app](https://diabeatit-9.herokuapp.com/)
 <br>
 ***
 
