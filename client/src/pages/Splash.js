@@ -28,7 +28,7 @@ class Splash extends React.Component {
                 {/* <a href="MainMenu"><button class="button2">Sign up</button></a>
                 <a href="MainMenu"><button class="button2">Login</button></a> */}
                 <a href="MainMenu"><button class="button2">Get started</button></a>
-                <a href="http://localhost:3001/auth/google" class="button">
+                <a href="/auth/google" class="button">
           <div>
             <span class="svgIcon t-popup-svg">
               <svg
