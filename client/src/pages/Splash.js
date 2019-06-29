@@ -28,7 +28,7 @@ class Splash extends React.Component {
                 {/* <a href="MainMenu"><button class="button2">Sign up</button></a>
                 <a href="MainMenu"><button class="button2">Login</button></a> */}
                 <a href="MainMenu"><button class="button2">Get started</button></a>
-                <a href="/auth/google" class="button">
+                <a href="https://diabeatit-9.herokuapp.com/auth/google" class="button">
           <div>
             <span class="svgIcon t-popup-svg">
               <svg

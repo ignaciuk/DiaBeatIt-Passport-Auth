@@ -16,7 +16,7 @@ router.get(
   function(req, res) {
       var token = req.user.token;
       var username = req.user.email;
-      res.redirect("http://localhost:3000?token=" + token + "&username=" + username);
+      res.redirect("https://diabeatit-9.herokuapp.com/?token=" + token + "&username=" + username);
   }
 );
 
