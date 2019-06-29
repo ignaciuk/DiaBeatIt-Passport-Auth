@@ -146,15 +146,15 @@ class Map extends Component {
 					<Row>
 						<Col size="col-md-6 offset-md-3">
 							<p className="mainContentTextBlack">Please choose a store type:</p>
-							<select className="chosen-select dropDownMenu1" id="calorieEntryPage-mealCategory">
+							<select onChange={this.yelpStoreTypes} className="chosen-select dropDownMenu1" id="calorieEntryPage-mealCategory">
 								<option value="0"></option>
-								<option value="farmersmarket" onClick={this.yelpStoreTypes}>Farmers market</option>
-								<option value="markets" onClick={this.yelpStoreTypes}>Fruit and vegetable market</option>
-								{/* <option value="organic_stores" onClick={this.onClickHandler}>Organic store</option> */}
-								<option value="organic_stores" onClick={this.yelpStoreTypes}>Organic store</option>
-								<option value="cardioclasses" onClick={this.yelpStoreTypes}>Cardio class</option>
-								<option value="healthtrainers" onClick={this.yelpStoreTypes}>Health trainer</option>
-								<option value="yoga" onClick={this.yelpStoreTypes}>Yoga studio</option>
+								<option value="farmersmarket" >Farmers market</option>
+								<option value="markets" >Fruit and vegetable market</option>
+								<option value="organic_stores" >Organic store</option>
+								<option value="organic_stores" >Organic store</option>
+								<option value="cardioclasses" >Cardio class</option>
+								<option value="healthtrainers" >Health trainer</option>
+								<option value="yoga" >Yoga studio</option>
 							</select>
 						</Col>
 					</Row> 
