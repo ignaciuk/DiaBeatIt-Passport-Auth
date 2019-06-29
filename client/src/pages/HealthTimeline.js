@@ -54,7 +54,7 @@ class HealthTimeline extends React.Component {
             userBMI = (weight / (height / 100 * height / 100)).toFixed(0);
             lifeExpectancy = 76 + parseInt(userDiet) + parseInt(userExercise);
             // console.log(lifeExpectancy);
-            if (userBMI < 10) {
+            if (userBMI < 9.9) {
                 messageBMI = "Are you sure this is your height/weight?"
                 lifeExpectancy = "?";
             }
@@ -62,15 +62,15 @@ class HealthTimeline extends React.Component {
                 messageBMI = "Too thin"
                 // lifeExpectancy--;
             } 
-            if (userBMI > 18.5 && userBMI < 25) {
+            if (userBMI > 18.6 && userBMI < 25) {
                 messageBMI = "Healthy"
                 lifeExpectancy++
             } 
-            if (userBMI > 25 && userBMI < 50) {
+            if (userBMI > 26 && userBMI < 50) {
                 messageBMI = "Overweight"
                 lifeExpectancy--;
             } 
-            if (userBMI > 50) {
+            if (userBMI > 51) {
                 messageBMI = "Oof"
                 lifeExpectancy = currentAge
             }
