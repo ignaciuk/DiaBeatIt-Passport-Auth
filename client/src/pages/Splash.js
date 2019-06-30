@@ -7,6 +7,7 @@ import "../components/PageWrapper/pageWrapper.css";
 import "../components/MainContentContainer/mainContentContainer.css";
 import BackgroundImage from "../components/BackgroundImage";
 import SplashBanner from "../components/SplashBanner";
+import GoogleSignInButton from "../components/GoogleSignInButton";
 
 // Run "npm start" to start React app.
 // Run "npm i" or "npm i [specific component name]" in the command line if there are any dependencies missing in the node modules folder.
@@ -24,15 +25,19 @@ class Splash extends React.Component {
 
             <SplashBanner />
 
+           
+
             <div class="splashButtonsContainer">
                 {/* <a href="MainMenu"><button class="button1">Sign up</button></a>
                 <a href="MainMenu"><button class="button1">Login</button></a> */}
                 <a href="MainMenu"><button class="button1">Get started</button></a>
 
-                <a href="https://diabeatit-9.herokuapp.com/auth/google">
+                <GoogleSignInButton />
+
+                {/* <a href="https://diabeatit-9.herokuapp.com/auth/google"> */}
                 {/* <a href="http://localhost:3001/auth/google"> */}
                 {/* <a href="http://localhost:3001/auth/google" class="button"> */}
-                  <button class="googleButton">
+                  {/* <button class="googleButton">
                     <div>
                       <span class="svgIcon t-popup-svg">
                         <svg
@@ -64,8 +69,8 @@ class Splash extends React.Component {
                       <span class="button-label">Sign in with Google</span>
                     </div>
                   </button>
-                </a>
-            </div>   
+              </a> */}
+            </div>  
 
         </div>
         )
