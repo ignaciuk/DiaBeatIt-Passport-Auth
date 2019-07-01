@@ -66,7 +66,7 @@ class HealthTimeline extends React.Component {
                 messageBMI = "Healthy"
                 lifeExpectancy++
             } 
-            if (userBMI > 25.6 && userBMI < 50) {
+            if (userBMI > 26 && userBMI < 50) {
                 messageBMI = "Overweight"
                 lifeExpectancy--;
             } 
@@ -99,12 +99,19 @@ class HealthTimeline extends React.Component {
         // console.log(errorMessage);
 
         if (isNaN(userHeight && userWeight) || (!userDiet || !userExercise)) {
+
             document.getElementById("bmi").style.display = "none";
             document.getElementById("error").style.display = "block";
-
-            // alert("Form improperly filled out");
             document.getElementById("error").innerHTML = ("Please fill out all fields.");
             return
+
+        } if (this.state.currentHeightIn >= 12) {
+
+            document.getElementById("bmi").style.display = "none";
+            document.getElementById("error").style.display = "block";
+            document.getElementById("error").innerHTML = ("Please fill out all fields.");
+            return 
+            
         }
 
         event.preventDefault();
