@@ -52,11 +52,11 @@ class HealthTimeline extends React.Component {
 
         if (weight > 0 && height > 0 ) {
             userBMI = (weight / (height / 100 * height / 100)).toFixed(0);
-            lifeExpectancy = 76 + parseInt(userDiet) + parseInt(userExercise);
+            lifeExpectancy = 80 + parseInt(userDiet) + parseInt(userExercise);
             // console.log(lifeExpectancy);
-            if (userBMI < 9.9) {
-                messageBMI = "Are you sure this is your height/weight?"
-                lifeExpectancy = "?";
+            if (userBMI < 9) {
+                messageBMI = "Hmm"
+                lifeExpectancy = "50";
             }
             if (userBMI > 10 && userBMI< 18.5) {
                 messageBMI = "Too thin"
@@ -66,11 +66,11 @@ class HealthTimeline extends React.Component {
                 messageBMI = "Healthy"
                 lifeExpectancy++
             } 
-            if (userBMI > 26 && userBMI < 50) {
+            if (userBMI > 26 && userBMI < 60) {
                 messageBMI = "Overweight"
                 lifeExpectancy--;
             } 
-            if (userBMI > 51) {
+            if (userBMI > 61) {
                 messageBMI = "Oof"
                 lifeExpectancy = currentAge
             }
@@ -99,7 +99,7 @@ class HealthTimeline extends React.Component {
         // console.log(errorMessage);
 
         if (isNaN(userHeight && userWeight) || (!userDiet || !userExercise)) {
-
+            
             document.getElementById("bmi").style.display = "none";
             document.getElementById("error").style.display = "block";
             document.getElementById("error").innerHTML = ("Please fill out all fields.");
@@ -109,9 +109,9 @@ class HealthTimeline extends React.Component {
 
             document.getElementById("bmi").style.display = "none";
             document.getElementById("error").style.display = "block";
-            document.getElementById("error").innerHTML = ("Please fill out all fields.");
+            document.getElementById("error").innerHTML = ("Please correct height. Inches should not exceed 11.");
             return 
-            
+
         }
 
         event.preventDefault();
@@ -197,7 +197,7 @@ class HealthTimeline extends React.Component {
                                                     pattern="/d"
                                                     maxlength="2"
                                                     placeholder=""
-                                                    autocomplete="off"
+                                                    autoComplete="off"
                                                 >
                                                 </input>
                                             </Col>
@@ -221,7 +221,7 @@ class HealthTimeline extends React.Component {
                                                     pattern="\d"
                                                     maxlength="1"
                                                     placeholder="ft"
-                                                    autocomplete="off"
+                                                    autoComplete="off"
                                                 >
                                                 </input>
                                             </Col>
@@ -236,7 +236,7 @@ class HealthTimeline extends React.Component {
                                                     pattern="\d"
                                                     maxlength="2"
                                                     placeholder="in"
-                                                    autocomplete="off"
+                                                    autoComplete="off"
                                                 >
                                                 </input>
                                             </Col>
@@ -260,7 +260,7 @@ class HealthTimeline extends React.Component {
                                                     pattern="\d"
                                                     maxlength="3"
                                                     placeholder="lbs"
-                                                    autocomplete="off"
+                                                    autoComplete="off"
                                                 >
                                                 </input>
                                             </Col>
@@ -279,8 +279,8 @@ class HealthTimeline extends React.Component {
                                                         <option value="0"></option>
                                                         <option value="-2">Poor</option>
                                                         <option value="1">Average</option>
-                                                        <option value="2">Above Average</option>
-                                                        <option value="4">Ideal</option>
+                                                        <option value="3">Above Average</option>
+                                                        <option value="6">Ideal</option>
                                                     </select>
                                                 </label>
                                             </Col>
@@ -301,8 +301,8 @@ class HealthTimeline extends React.Component {
                                                         <option value="0"></option>
                                                         <option value="-2">Never</option>
                                                         <option value="0">1-2 Times a Week</option>
-                                                        <option value="2">2-3 Times a week</option>
-                                                        <option value="4">5+ Times a Week</option>
+                                                        <option value="4">2-3 Times a week</option>
+                                                        <option value="6">5+ Times a Week</option>
                                                     </select>
                                                 </label>
                                             </Col>
