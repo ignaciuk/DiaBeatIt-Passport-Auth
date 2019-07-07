@@ -15,41 +15,49 @@ import "../components/InputAndSelectField/inputAndSelectField.css";
 // Run "npm start" to start React app.
 // Run "npm i" or "npm i [specific component name]" in the command line if there are any dependencies missing in the node modules folder.
 
-function Resources() {
-  return (
-    <div>
+class Resources extends React.Component {
 
-      {/* ---------------------------------------- */}
-      {/* MAIN CONTENT OF PAGE */}
+  componentDidMount() {
+    // Scroll to top of page
+    window.scrollTo(0, 0);
+  }
 
-      {/* Page Wrapper */}
-      <div className="pageWrapper">
+  render () {
+    return (
+      <div>
 
-          {/* Hello user first name text and sign out anchor */}
-          <HelloUserAndSignOut />
+        {/* ---------------------------------------- */}
+        {/* MAIN CONTENT OF PAGE */}
 
-          {/* Page header */}
-          <div className="pageHeader">Resources</div>
-      
-          {/* Main content container */}
-          <div className="mainContentContainer">
-          
-            <div className="App">    
-              <Resource/>
+        {/* Page Wrapper */}
+        <div className="pageWrapper">
+
+            {/* Hello user first name text and sign out anchor */}
+            <HelloUserAndSignOut />
+
+            {/* Page header */}
+            <div className="pageHeader">Resources</div>
+        
+            {/* Main content container */}
+            <div className="mainContentContainer">
+            
+              <div className="App">    
+                <Resource/>
+              </div>
+
             </div>
 
-          </div>
+        </div>
+
+
+        {/* ---------------------------------------- */}
+        {/* HAMBURGER MENU */}
+
+        <HamburgerMenu />
 
       </div>
-
-
-      {/* ---------------------------------------- */}
-      {/* HAMBURGER MENU */}
-
-      <HamburgerMenu />
-
-    </div>
-  );
+    );
+  }
 }
 
 export default Resources;

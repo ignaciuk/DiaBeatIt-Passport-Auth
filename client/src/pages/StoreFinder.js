@@ -15,6 +15,11 @@ import YelpGoogleApi from "../components/YelpGoogleApi";
 // Run "npm i" or "npm i [specific component name]" in the command line if there are any dependencies missing in the node modules folder.
 
 class StoreFinder extends React.Component {
+
+    componentDidMount() {
+        // Scroll to top of page
+        window.scrollTo(0, 0);
+    }
     
     render() {
         return(
