@@ -16,6 +16,7 @@ passport.use(
    clientID: "683331518631-p31hgnaonk7pgb4q9qm1jj6vetc8m4rl.apps.googleusercontent.com",
    clientSecret: "izRFsoXNYwjDGVot_591B0KL",
    callbackURL: "https://diabeatit-9.herokuapp.com/auth/google/callback"
+    // callbackURL: "https://localhost:3001/auth/google/callback"
   },
   function(accessToken, refreshToken, profile, done) {
    var userData = {
