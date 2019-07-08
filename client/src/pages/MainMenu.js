@@ -10,6 +10,7 @@ var signOutDisplay = "";
 
 const checkForUser = () => {
     if (userName) {
+      signOutDisplay = "Sign Out";
       return userName;
     } else {
       userName = "Guest";
