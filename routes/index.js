@@ -16,21 +16,10 @@ router.get(
   function(req, res) {
       var token = req.user.token;
       var username = req.user.email;
-      res.redirect("https://diabeatit-9.herokuapp.com/?token=" + token + "&username=" + username);
+      res.redirect("https://diabeatit-9.herokuapp.com/MainMenu/?token=" + token + "&username=" + username);
+      // res.redirect("https://localhost:3000/MainMenu/?token=" + token + "&username=" + username);
   }
 );
-
-// router.get('/logout', function(req, res){
-//   req.logout();
-//   res.redirect('/');
-//   console.log("user logged out");
-// });
-
-// router.get('/logout', function (req, res){
-//   req.session.destroy(function (err) {
-//     res.redirect('/'); //Inside a callback… bulletproof!
-//   });
-// });
 
 router.get('/logout', function(req, res, next) {
   // if (req.session) {
