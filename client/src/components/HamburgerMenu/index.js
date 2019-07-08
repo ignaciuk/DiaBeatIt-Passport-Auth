@@ -2,6 +2,21 @@ import React from "react";
 import { Link, withRouter } from "react-router-dom";
 import "./hamburgerMenu.css";
 
+var userName = localStorage.getItem("username");
+var signOutDisplay = "Sign Out";
+
+const checkForUser = () => {
+    if (userName) {
+      return userName;
+    } else {
+      userName = "Guest";
+      signOutDisplay = "Sign In";
+      return userName;
+    }
+  };
+
+checkForUser();
+
 class HamburgerMenu extends React.Component {
 
   // --------------------
@@ -92,7 +107,7 @@ class HamburgerMenu extends React.Component {
             <Link to="/HealthCard" className={this.getMenuItemClasses("/HealthCard")}>Digital Health Card</Link>
             <Link to="/Resources" className={this.getMenuItemClasses("/Resources")}>Resources</Link>
             <Link to="/Contact" className={this.getMenuItemClasses("/Contact")}>Contact</Link>
-            <Link to="/" className={this.getMenuItemClasses("/")} onClick={this.signOut}>Sign Out</Link>
+            <Link to="/" className={this.getMenuItemClasses("/")} onClick={this.signOut}>{signOutDisplay}</Link>
           </div>
 
         </div>

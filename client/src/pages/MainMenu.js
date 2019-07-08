@@ -5,6 +5,21 @@ import { Link, withRouter } from "react-router-dom";
 // Run "npm start" to start React app.
 // Run "npm i" or "npm i [specific component name]" in the command line if there are any dependencies missing in the node modules folder.
 
+var userName = localStorage.getItem("username");
+var signOutDisplay = "";
+
+const checkForUser = () => {
+    if (userName) {
+      return userName;
+    } else {
+      userName = "Guest";
+      signOutDisplay = "Sign In";
+      return userName;
+    }
+  };
+
+checkForUser();
+
 class MainMenu extends React.Component {
 
   componentDidMount() {
@@ -16,6 +31,7 @@ class MainMenu extends React.Component {
     window.localStorage.clear();
     window.location.replace("/");  
   }
+
 
   render() {
     return(
@@ -32,7 +48,7 @@ class MainMenu extends React.Component {
           <Link to="HealthCard" className="mainMenuAnchor">Digital Health Card</Link>
           <Link to="Resources" className="mainMenuAnchor">Resources</Link>
           <Link to="Contact" className="mainMenuAnchor">Contact</Link>
-          <span className="mainMenuAnchor" onClick={this.signOut}>Sign Out</span>
+          <span className="mainMenuAnchor" onClick={this.signOut}>{signOutDisplay}</span>
         </div>
 
       </div>

@@ -4,12 +4,14 @@ import "./helloUserAndSignOut.css";
 
 
 var userName = localStorage.getItem("username");
+var signOutDisplay = "Sign Out";
 
 const checkForUser = () => {
     if (userName) {
       return userName;
     } else {
       userName = "Guest";
+      signOutDisplay = "Sign In";
       return userName;
     }
   };
@@ -27,7 +29,7 @@ class HelloUserAndSignOut extends React.Component {
     return(
       <div>             
         <div className="helloUserTxt">Hello <span className="userFirstName">{userName}!</span></div>
-        <div className="signOutContainer"><span className="signOutAnchor" onClick={this.signOut}>Sign Out</span></div>
+        <div className="signOutContainer"><span className="signOutAnchor" onClick={this.signOut}>{signOutDisplay}</span></div>
       </div>   
     )
   }
