@@ -1,13 +1,12 @@
 import React from "react";
 import "./helloUserAndSignOut.css";
 
-
-
 var userName = localStorage.getItem("username");
-var signOutDisplay = "Sign Out";
+var signOutDisplay = "";
 
 const checkForUser = () => {
     if (userName) {
+      signOutDisplay = "Sign Out";
       return userName;
     } else {
       userName = "Guest";
