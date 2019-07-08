@@ -115,7 +115,14 @@ class RecipeFinder extends Component {
               (<h1 className='text-center mainContentTextRed'>{message}</h1>) :
               (<Recipes className="container" recipes={recipes} />)
             }
+
+            {/* /* Only single break needed here, there is enough room underneath */}
+            <Br />
+            {/* <Br /> */}
+            {/* <Br /> */}
+
           </div>
+          
         </div>
 
         {/* ---------------------------------------- */}
